@@ -17,8 +17,7 @@ function dumpMarker(name,address,dates) {
 }
 function addMarker(name,address,dates,lat,lng) {
     var marker = new google.maps.Marker({
-        title: dates.replace(",","<br>"),
-        label: name,
+        title: dates.replace(/,/g,"\n"),
         map: map,
         position: { lat: lat, lng: lng }
     });
