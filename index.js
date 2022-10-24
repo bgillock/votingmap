@@ -17,6 +17,7 @@ function addMarker(name,address) {
 }
 function initMap() {
     geocoder = new google.maps.Geocoder();
+    const houston = { lat: 29.820, lng: -95.467 };
     map = new google.maps.Map(document.getElementById("map"), {
         zoom: 8,
         center: houston,
