@@ -2,7 +2,7 @@
 var geocoder;
 var map;
 function addMarker(name,address) {
-    syncBuiltinESMExports()
+
     geocoder.geocode( { 'address': address}, function(results, status) {
         if (status == 'OK') {
           var marker = new google.maps.Marker({
@@ -19,7 +19,7 @@ function initMap() {
     geocoder = new google.maps.Geocoder();
     const houston = { lat: 29.820, lng: -95.467 };
     map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 8,
+        zoom: 10,
         center: houston,
       });
 
