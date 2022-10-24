@@ -9,10 +9,11 @@ while (i < n):
     while (i < n) and (lines[i].find("<tr>") == -1):
         i += 1
     i += 1
-    if (i < n+3):
+    if (i < n+6):
         name = lines[i][4:-6]
         i += 1
         address = lines[i][4:-6].replace("<br>","")
-
-        print("    setTimeout(addMarker,1000/40,\"",name,"\",\"",address,"\");")
+        i += 2 
+        dates = lines[i][:-1].replace("<br>",",")
+        print("    addMarker(\"",name,"\",\"",address,"\",\"",dates,"\");")
 
