@@ -14,5 +14,5 @@ while (i < n):
         i += 1
         address = lines[i][4:-6].replace("<br>","")
 
-        print("    addMarker(\"",name,"\",\"",address,"\");")
+        print("    setTimeout(addMarker,1000/40,\"",name,"\",\"",address,"\");")
 
