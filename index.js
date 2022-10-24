@@ -1,7 +1,4 @@
 // Initialize and add the map
-
-const { syncBuiltinESMExports } = require("module");
-
 var geocoder;
 var map;
 function addMarker(name,address) {
